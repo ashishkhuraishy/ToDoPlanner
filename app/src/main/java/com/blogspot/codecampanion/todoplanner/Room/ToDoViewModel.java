@@ -21,39 +21,39 @@ public class ToDoViewModel extends AndroidViewModel {
     }
 
 
-    void insertTask(Task task){
+    public void insertTask(Task task){
         toDoRepository.insertTask(task);
     }
 
-    void updateTask(Task task){
+    public void updateTask(Task task){
         toDoRepository.updateTask(task);
     }
 
-    void deleteTask(Task task){
+    public void deleteTask(Task task){
         toDoRepository.deleteTask(task);
     }
 
-    void deleteAllTask(){
+    public void deleteAllTask(){
         toDoRepository.deleteAllTask();
     }
 
-    LiveData<List<Task>> getTasks(){
+    public LiveData<List<Task>> getTasks(){
         return toDoRepository.getTasks();
     }
 
-    void insertSubTask(SubTask subTask){
+    public void insertSubTask(SubTask subTask){
         toDoRepository.insertSubTask(subTask);
     }
 
-    void updateSubTask(SubTask subTask){
+    public void updateSubTask(SubTask subTask){
         toDoRepository.updateSubTask(subTask);
     }
 
-    void deleteSubTask(SubTask subTask){
+    public void deleteSubTask(SubTask subTask){
         toDoRepository.deleteSubTask(subTask);
     }
 
-    LiveData<List<SubTask>> getSubTasks(int taskId){
+    public LiveData<List<SubTask>> getSubTasks(int taskId){
         return toDoRepository.getSubTasks(taskId);
     }
 
