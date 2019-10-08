@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.blogspot.codecampanion.todoplanner.R;
+import com.blogspot.codecampanion.todoplanner.Room.SubTask.SubTask;
 import com.blogspot.codecampanion.todoplanner.Room.Task.Task;
 
 
@@ -86,5 +87,6 @@ public class TaskAdapter extends ListAdapter<Task, TaskAdapter.TaskViewHolder> {
     public interface setOnItemClickListener{
         void OnItemClick(Task task);
     }
+
 
 }

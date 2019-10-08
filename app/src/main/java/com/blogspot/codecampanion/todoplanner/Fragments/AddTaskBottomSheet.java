@@ -13,12 +13,13 @@ import androidx.annotation.Nullable;
 
 import com.blogspot.codecampanion.todoplanner.R;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class AddTaskBottomSheet extends BottomSheetDialogFragment {
 
     private TextInputEditText textInputEditText;
-    private Button addButton;
+    private MaterialButton addButton;
 
     private AddTaskListener listener;
 

@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
     tools:context=".SubTaskActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxStrokeColor="@color/secondaryColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/subTaskEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task"
+            android:textSize="24sp"
+            android:inputType="text"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addSubTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/secondaryDarkColor"
+        android:padding="5dp"
+        android:text="Add Sub Tasks"
+        android:textColor="@color/secondaryTextColor"
+        app:cornerRadius="4dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/subTaskrecyclerView"
+        android:layout_width="409dp"
+        android:layout_height="454dp"
+        android:layout_marginTop="8dp"
+        tools:listitem="@layout/subtask_list_activity" />
+
+</LinearLayout>

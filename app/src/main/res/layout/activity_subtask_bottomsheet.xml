@@ -6,34 +6,32 @@
     android:layout_height="wrap_content"
     android:padding="16dp"
     android:layout_marginBottom="10dp">
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Task"
+        android:text="SubTask"
+        android:textSize="28sp"
         android:layout_gravity="center_horizontal"
-        android:textSize="24sp"
         android:layout_marginBottom="8dp"/>
-
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         app:boxStrokeColor="@color/secondaryColor">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/taskBottomSheetEditText"
+            android:id="@+id/subTaskBottomSheetEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Add Task"
-            android:inputType="text"/>
+            android:hint="Add SubTask"
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/addTaskBottomSheetButton"
+        android:id="@+id/addSubTaskBottomSheetButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add Task"
+        android:text="Add SubTask"
         android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

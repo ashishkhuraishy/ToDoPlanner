@@ -1,6 +1,7 @@
 package com.blogspot.codecampanion.todoplanner;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
@@ -110,7 +111,23 @@ public class MainActivity extends AppCompatActivity implements AddTaskBottomShee
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode == EDIT_TASK_ACTION && resultCode == RESULT_OK){
+            String taskText = data.getStringExtra(EXTRA_TASK);
+            int taskId = data.getIntExtra(EXTRA_TASK_ID, -1);
+            if(!taskText.trim().isEmpty() && taskId != -1){
+                Task task = new Task(taskText);
+                task.setId(taskId);
+                viewModel.updateTask(task);
+                Toast.makeText(this, "Update Success", Toast.LENGTH_SHORT).show();
+            }else {
+                Toast.makeText(this, "Oops! Something Went Wrong...", Toast.LENGTH_SHORT).show();
+            }
+        }
     }
 }
